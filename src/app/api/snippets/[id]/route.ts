@@ -1,9 +1,15 @@
 import { getSnippetFromDb } from "@/utils/restdb";
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
+
+type Props = {
+    params: {
+        id: string;
+    };
+};
 
 export async function GET(
-    request: NextRequest,
-    { params }: { params: { id: string } }
+    request: Request,
+    { params }: Props
 ) {
     try {
         const { id } = params;
