@@ -1,15 +1,16 @@
 import { getSnippetFromDb } from "@/utils/restdb";
 import { NextResponse } from "next/server";
+import { Context } from "node:vm";
 
 
 export async function GET(
     request: Request,
-    context: { params: { id: string } }
+    context: Context
 ) {
     try {
         const { id } = context.params;
         const snippet = await getSnippetFromDb(id);
-        
+
         if (!snippet) {
             return NextResponse.json(
                 { error: "Snippet not found" },
