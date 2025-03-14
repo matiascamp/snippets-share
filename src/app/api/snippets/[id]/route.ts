@@ -1,18 +1,13 @@
 import { getSnippetFromDb } from "@/utils/restdb";
 import { NextResponse } from "next/server";
 
-type Props = {
-    params: {
-        id: string;
-    };
-};
 
 export async function GET(
     request: Request,
-    { params }: Props
+    context: { params: { id: string } }
 ) {
     try {
-        const { id } = params;
+        const { id } = context.params;
         const snippet = await getSnippetFromDb(id);
         
         if (!snippet) {
