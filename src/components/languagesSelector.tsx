@@ -1,41 +1,37 @@
 import { LANGUAGES } from "@/constants"
-import Image from "next/image"
-
-type props = {
-    language: string,
-    value: string
-}
-
-type languagesProps = {
-    language: string
-    onSelect: ({ language, value }: props) => void
-}
+import SaveButton from "./SaveButton"
+import { useSnippetsStore } from "@/app/store/snipetsProps"
 
 
-const LanguagesSelector = ({ onSelect, language }: languagesProps) => {
+const LanguagesSelector = () => {
+
+    const setLanguage = useSnippetsStore(state => state.setLanguage)
+    const setTheme = useSnippetsStore(state => state.setTheme)
+    const language = useSnippetsStore(state => state.language)
+    const position = useSnippetsStore(state => state.position)
+    
+
     return (
-        <div className="flex justify-between items-end">
+        <div className="flex justify-between items-center">
             <div className="flex gap-5">
                 <select
-                    className="w-15"
+                    className={`w-auto rounded-xl bg-gray-300 text-black p-1 text-xs text-center ${position === 'id' ? 'cursor-default' : 'cursor-pointer'}`}
                     name="languages"
                     id="languages"
-                    onChange={(e) => onSelect({ language: e.target.value, value: e.target.value })}
+                    onChange={(e) => setLanguage(e.target.value)}
                     value={language}
+                    disabled={position === 'id'}
                 >
                     {LANGUAGES.map((e, index) => (
-                        <option className={`${language === e.language ? 'bg-white' : 'bg-current'}`} key={index} value={e.value}>{e.language}</option>
+                        <option className={`${language === e.language ? 'bg-white' : 'bg-gray-300'}`} key={index} value={e.language}>{e.language}</option>
                     ))}
                 </select>
-                <select className="w-20" name="theme" id="theme">
+                <select className={`w-20 rounded-xl bg-gray-300 text-black text-xs text-center ${position === 'id' ? 'cursor-default' : 'cursor-pointer'}`} name="theme" id="theme" onChange={(e) => setTheme(e.target.value)} disabled={position === 'id'}>
                     <option value="vs-dark">vs-dark</option>
                     <option value="light">light</option>
                 </select>
             </div>
-            <button className="flex items-center gap-2 bg-blue-600 rounded-3xl py-2 px-4">
-                <Image src="/Share.svg" alt="share image" width={20} height={20} />
-                Share
-            </button>
+            <SaveButton />
         </div>
     )
 }

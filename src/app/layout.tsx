@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { outfit } from "@/ui/fonts";
 
 
 export const metadata: Metadata = {
@@ -15,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` antialiased`}
+        className={`${outfit.className} antialiased`}
       >
         {children}
       </body>

@@ -1,7 +1,7 @@
 export const LANGUAGES = [
-    {
-        language: 'HTML',
-        value: `<html>
+  {
+    language: 'HTML',
+    value: `<html>
   <head>
     <title>HTML Sample</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,41 +18,17 @@ export const LANGUAGES = [
     <h1>Heading No.1</h1>
     <input disabled type="button" value="Click me" />
   </body>
-</html>`},
-    {
-        language: 'JavaScript',
-        value: ""
-    },
-    {
-        language: 'TypeScript',
-        value: ""
-    },
-    {
-        language: 'CSS',
-        value: ""
-    },
-    {
-        language: 'JSON',
-        value: ""
-    },
-    {
-        language: 'LESS',
-        value: ""
-    },
-    {
-        language: 'SCSS',
-        value: ""
-    },
-    {
-        language: 'PHP',
-        value: ""
-    },
-    {
-        language: 'Java',
-        value: ""
-    },
-    {
-        language: 'Python',
-        value: ""
-    }
+</html>`
+  },
+  { language: "TypeScript", value: "" },
+  { language: "Python", value: "" },
+  { language: "Java", value: "" },
+  { language: "C++", value: "" },
+  { language: "Ruby", value: "" },
+  { language: "PHP", value: "" },
+  { language: "Go", value: "" },
+  { language: "Rust", value: "" },
+  { language: "CSS", value: "" },
+  { language: "SQL", value: "" },
+  { language: "Shell", value: "" }
 ]
