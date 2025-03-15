@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${outfit.className} antialiased`}
+        className={`${outfit.className} bg-violet-600! relative antialiased`}
       >
         {children}
       </body>

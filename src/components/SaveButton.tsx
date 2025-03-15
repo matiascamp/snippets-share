@@ -48,10 +48,10 @@ export default function SaveButton() {
             {(position === 'id'&& url) &&
                 <span className='flex gap-4 items-center'>
                     <Image src="/link.svg" alt='share image' width={20} height={20} />
-                    <p className='overflow-hidden text-clip max-w-30 text-nowrap text-xs'>{url}</p>
+                    <p className='overflow-hidden text-clip max-w-30 text-nowrap text-xs text-gray-500'>{url}</p>
                 </span>
             }
-            <button className={`flex items-center gap-2 text-base  rounded-3xl py-3 px-5 ${position === 'id' ? 'cursor-defaultb bg-gray-600' : 'cursor-pointer bg-blue-600'}`} onClick={handleSave} disabled={position === 'id'}>
+            <button className={`flex items-center gap-2 text-base  rounded-3xl py-3 px-5 ${position === 'id' ? 'cursor-defaultb bg-gray-500' : 'cursor-pointer bg-blue-600'}`} onClick={handleSave} disabled={position === 'id'}>
                 <Image src="/Share.svg" alt="share image" width={20} height={20} />
                 Share
             </button>

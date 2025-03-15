@@ -44,8 +44,8 @@ export default function SnippetEditor({ snippet }: SnippetEditorProps) {
     return (
         <div className="flex flex-col justify-start items-center h-screen bg-[url(/Hero-Background-notecode.svg)] bg-no-repeat">
             <Image className="py-10" src="/NoteCodeLogo.svg" alt="page-logo" width={110} height={20} />
-            <h2 className="text-black text-3xl font-medium py-2">Create & Share</h2>
-            <h1 className="text-black text-4xl font-medium ">Your Code easily</h1>
+            <h2 className="text-black text-4xl font-extrabold py-2">Create & Share</h2>
+            <h1 className="text-black text-5xl font-extrabold ">Your Code easily</h1>
             <CustomEditor />
         </div>
     )

@@ -12,7 +12,7 @@ const LanguagesSelector = () => {
     
 
     return (
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-end px-4">
             <div className="flex gap-5">
                 <select
                     className={`w-auto rounded-xl bg-gray-300 text-black p-1 text-xs text-center ${position === 'id' ? 'cursor-default' : 'cursor-pointer'}`}
@@ -26,7 +26,7 @@ const LanguagesSelector = () => {
                         <option className={`${language === e.language ? 'bg-white' : 'bg-gray-300'}`} key={index} value={e.language}>{e.language}</option>
                     ))}
                 </select>
-                <select className={`w-20 rounded-xl bg-gray-300 text-black text-xs text-center ${position === 'id' ? 'cursor-default' : 'cursor-pointer'}`} name="theme" id="theme" onChange={(e) => setTheme(e.target.value)} disabled={position === 'id'}>
+                <select className={`w-20 rounded-2xl bg-gray-300 text-black text-xs text-center ${position === 'id' ? 'cursor-default' : 'cursor-pointer'}`} name="theme" id="theme" onChange={(e) => setTheme(e.target.value)} disabled={position === 'id'}>
                     <option value="vs-dark">vs-dark</option>
                     <option value="light">light</option>
                 </select>
