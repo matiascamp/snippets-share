@@ -34,7 +34,7 @@ const CustomEditor = () => {
     },[value])
 
     return (
-        <div className="flex flex-col w-4xl h-150 rounded-md p-4 justify-between mt-8" style={{ backgroundColor: theme === 'vs-dark' ? '#1e1e1e' : '#ffffff' }}>
+        <div className="flex flex-col w-md sm:w-xl md:w-2xl lg:w-3xl xl:w-4xl h-150 rounded-md p-4 justify-between mt-8" style={{ backgroundColor: theme === 'vs-dark' ? '#1e1e1e' : '#ffffff' }}>
             <Editor
             className=""
                 theme={theme}
