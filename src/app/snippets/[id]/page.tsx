@@ -1,11 +1,6 @@
 import { getSnippetFromDb } from "@/utils/restdb"
 import SnippetEditor from "@/components/SnippetEditor";
 
-interface Props {
-    params: {
-        id: string;
-    };
-}
 
 interface Snippet {
     language: string;
@@ -14,9 +9,9 @@ interface Snippet {
     generated_Id: string;
 }
 
-export default async function SpecificSnippet({ params }: Props) {
+export default async function SpecificSnippet({ params }:{params:Promise<{id:string}>}) {
     try {
-        const { id } = params;
+        const { id } = await params;
         const snippet = await getSnippetFromDb(id) as Snippet | null;
         return <SnippetEditor snippet={snippet} />;
     } catch (error) {
