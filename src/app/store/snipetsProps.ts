@@ -20,7 +20,7 @@ export const useSnippetsStore = create<State>()(persist((set) => {
     return {
         language: 'HTML',
         value: LANGUAGES[0].value,
-        theme:'vs-dark',
+        theme:'light',
         position:'initial',
         url:'',
         setLanguage: (value:string) => set({language:value}),
