@@ -14,10 +14,10 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="flex text-center flex-col justify-start items-center h-screen bg-[url(/Hero-Background-notecode.svg)] bg-no-repeat bg-cover">
+    <div className="flex text-center flex-col justify-start items-center h-screen bg-[url(/Hero-Background-notecode.svg)] bg-no-repeat bg-start xl:bg-cover">
       <Image className="py-10" src="/NoteCodeLogo.svg" alt="page-logo" width={110} height={20} />
-      <h2 className="text-black text-3xl font-medium py-2">Create & Share</h2>
-      <h1 className="text-black text-4xl font-medium ">Your Code easily</h1>
+      <h2 className="text-black text-3xl font-bold py-2">Create & Share</h2>
+      <h1 className="text-black text-4xl font-bold ">Your Code easily</h1>
       <CustomEditor />
     </div>
   );
